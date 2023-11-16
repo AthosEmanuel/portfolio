@@ -4,8 +4,6 @@ Este projeto foi desenvolvido utilizando a abordagem de modularização do React
 
 ## Scripts
 
-Nesse projeto esses são os scripts
-
 ### Instalação
 
 Para instalar as dependências, utilize o seguinte comando:
