@@ -29,8 +29,9 @@ const ProjectScreen: React.FC = () => {
           <h2>Prize Claw (jogo da Garra)</h2>
           <img src={ImgGarra} height={340} alt="tela projeto garra" />
           <p>
-            Esse e o classico jogo que tem nos shoppings, onde o jogador
-            controla uma garra para pegar um premio.
+            Este é o clássico jogo encontrado em shoppings, no qual o
+            participante assume o controle de uma garra em uma tentativa de
+            capturar um prêmio.
           </p>
           <Button text="Detalhes" handleEvent={sendToDetails1} />
         </div>
@@ -38,9 +39,10 @@ const ProjectScreen: React.FC = () => {
           <h2>Pokedex</h2>
           <img src={ImgPokedex} height={300} alt="tela projeto pokedex" />
           <p>
-            Com certeza pokemon marcou a sua infancia creio eu que você sabe o
-            nome de varios, e aqui você tem uma biblioteca com varias
-            informações com varios pokemons.
+            Certamente, Pokémon deixou uma marca inesquecível em sua infância.
+            Eu acredito que você conhece muitos deles, e agora, você tem à
+            disposição uma biblioteca repleta de informações sobre diversos
+            Pokémon.
           </p>
           <Button text="Detalhes" handleEvent={sendToDetails2} />
         </div>
@@ -48,8 +50,8 @@ const ProjectScreen: React.FC = () => {
           <h2>Fórum</h2>
           <img src={ImgJornal} height={300} alt="tela projeto ó" />
           <p>
-            Lembra dos foruns no inicio da internet, bem esse projeto e um
-            daqueles sites que nos dao nostalgia daqueles anos.
+            Lembra-se dos fóruns no início da internet? Bem, este projeto é um
+            desses sites que nos trazem nostalgia daquela época.
           </p>
           <Button text="Detalhes" handleEvent={sendToDetails3} />
         </div>
