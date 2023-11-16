@@ -4,7 +4,7 @@ Este projeto foi desenvolvido utilizando a abordagem de modularização do React
 
 ## Scripts
 
-In the project directory, you can run:
+Nesse projeto esses são os scripts
 
 ### Instalação
 
