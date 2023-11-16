@@ -1,0 +1,82 @@
+@font-face {
+  font-family: KdamThmorPro;
+  src: url("../src/assets/fonts/KdamThmorPro-Regular.ttf");
+}
+
+
+
+@font-face {
+  font-family: CyberPunk;
+  src: url("../src/assets/fonts/CyberwayRiders-lg97d.ttf");
+}
+
+body {
+  background-color: var(--bgcolor);
+  color: #ebecf3;
+  margin: 0;
+  font-family: KdamThmorPro;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  cursor: default;
+}
+
+h1 {
+  font-size: 5rem;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: 20px;
+  font-family: CyberPunk;
+  color: #fdf800;
+}
+
+
+
+p {
+  display: flex;
+  flex-wrap: wrap;
+  width: 600px;
+  justify-content: center;
+  text-align: center;
+  margin: 1em 0;
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+:root {
+  --background-dark: #232323;
+  --pink: #9400D3;
+  --bgcolor: #080808;
+  --textcolor: #ebecf3;
+  --background: #111;
+}
+
+.iconsStyle {
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out
+}
+
+.iconsStyle:hover {
+  color: var(--pink);
+}
+
+
+
+@media screen and (max-width: 769px) {
+  body {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 2em;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    width: 100%;
+    font-size: 1rem;
+    margin: 1em 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

@@ -1,0 +1,19 @@
+button {
+    background-color: var(--pink);
+    width: 200px;
+    height: 50px;
+    color: #080808;
+    font-family: KdamThmorPro;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    font-weight: 800;
+    margin-bottom: 50px;
+}
+
+button:hover {
+    color: #fff;
+}
