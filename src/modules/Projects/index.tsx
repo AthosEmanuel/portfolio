@@ -1,8 +1,10 @@
-import React from "react";
 import "./style.scss";
-import { Button } from "../../components";
+
+import { ImgGarra, ImgJornal, ImgPokedex, ImgToDo } from "../../assets";
+
+import React from "react";
 import { useNavigate } from "react-router-dom";
-import { ImgGarra, ImgJornal, ImgPokedex } from "../../assets";
+import { Button } from "../../components";
 
 const ProjectScreen: React.FC = () => {
   const navigate = useNavigate();
@@ -11,20 +13,26 @@ const ProjectScreen: React.FC = () => {
     navigate("/");
   };
 
-  const sendToDetails1 = () => {
-    navigate("/details", { state: { id: 1 } });
-  };
-  const sendToDetails2 = () => {
-    navigate("/details", { state: { id: 2 } });
-  };
-  const sendToDetails3 = () => {
-    navigate("/details", { state: { id: 3 } });
+  const sendToDetails = (id: any) => {
+    navigate("/details", { state: { id: id } });
   };
 
   return (
     <body>
       <h1>Projetos</h1>
       <div className="contentWrapperProjects">
+        <div className="imagemHover">
+          <h2>TO DO (Lista de Tarefas)</h2>
+          <img src={ImgToDo} height={340} alt="tela da aplicação To Do" />
+          <p>
+            Aplicação web desenvolvida para gerenciamento de tarefas diárias.
+            Permite criar, editar, concluir e excluir tarefas, oferecendo uma
+            interface limpa e intuitiva. Desenvolvida com React, com foco em
+            componentização, organização e boas práticas de usabilidade.
+          </p>
+          <Button text="Detalhes" handleEvent={() => sendToDetails(4)} />
+        </div>
+
         <div className="imagemHover">
           <h2>Prize Claw (jogo da Garra)</h2>
           <img src={ImgGarra} height={340} alt="tela projeto garra" />
@@ -33,7 +41,7 @@ const ProjectScreen: React.FC = () => {
             participante assume o controle de uma garra em uma tentativa de
             capturar um prêmio.
           </p>
-          <Button text="Detalhes" handleEvent={sendToDetails1} />
+          <Button text="Detalhes" handleEvent={() => sendToDetails(1)} />
         </div>
         <div className="imagemHover">
           <h2>Pokedex</h2>
@@ -44,7 +52,7 @@ const ProjectScreen: React.FC = () => {
             disposição uma biblioteca repleta de informações sobre diversos
             Pokémon.
           </p>
-          <Button text="Detalhes" handleEvent={sendToDetails2} />
+          <Button text="Detalhes" handleEvent={() => sendToDetails(2)} />
         </div>
         <div className="imagemHover">
           <h2>Fórum</h2>
@@ -53,7 +61,7 @@ const ProjectScreen: React.FC = () => {
             Lembra-se dos fóruns no início da internet? Bem, este projeto é um
             desses sites que nos trazem nostalgia daquela época.
           </p>
-          <Button text="Detalhes" handleEvent={sendToDetails3} />
+          <Button text="Detalhes" handleEvent={() => sendToDetails(3)} />
         </div>
       </div>
       <Button text="Voltar" handleEvent={sendToHome} />

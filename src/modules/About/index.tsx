@@ -1,8 +1,10 @@
-import React from "react";
 import "./style.scss";
-import { Button, Span } from "../../components";
-import { useNavigate } from "react-router-dom";
+
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { Button, Span } from "../../components";
+
+import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const AboutScreen: React.FC = () => {
   const navigate = useNavigate();
@@ -22,27 +24,39 @@ const AboutScreen: React.FC = () => {
     <body>
       <h1>Sobre</h1>
       <div className="contentWrapper">
-        <div className="aboutText">
+        <div
+          className="aboutText"
+          style={{ maxWidth: "800px", margin: "0 auto", lineHeight: 1.6 }}
+        >
           <p>
-            Olá, sou um desenvolvedor desde 2019, iniciando minha trajetória com
-            Java e Bootstrap. Em 2020, após um ano dedicado ao aprendizado,
-            realizei a transição para o Angular TypeScript. Posteriormente,
-            aprofundei-me no universo do React, onde descobri a ferramenta que
-            mais aprecio para desenvolver. Ao longo do caminho, também explorei
-            o Flutter Web e o Node.js, sendo este último meu framework de
-            backend preferido para aplicar em meus projetos.
+            Olá, sou desenvolvedor desde 2019, com uma trajetória marcada pela
+            evolução constante e pela paixão por criar soluções inteligentes.
+            Iniciei minha carreira com Java e Bootstrap, e rapidamente expandi
+            meus conhecimentos para frameworks modernos como Angular e
+            TypeScript. Ao longo dos anos, encontrei no React — tanto web quanto
+            mobile — a ferramenta ideal para transformar ideias em interfaces
+            dinâmicas, escaláveis e de alta performance.
           </p>
-          <p>
-            Durante minha carreira, adquiri habilidades abrangentes em diversas
-            linguagens de programação e frameworks, resultando na entrega de
-            soluções eficientes e na colaboração em projetos de grande
-            relevância. Minha paixão pela tecnologia me impulsiona a buscar
-            constantemente novos desafios, visando aprimorar minhas habilidades
-            e contribuir para o sucesso de projetos inovadores. Estou
-            entusiasmado com as oportunidades que o futuro reserva e empenhado
-            em continuar evoluindo como profissional da área de desenvolvimento.
+
+          <p style={{ marginTop: 20 }}>
+            Além do React, aprofundei minhas habilidades em Node.js, meu
+            framework de backend preferido, e tive experiências enriquecedoras
+            com Flutter Web e NestJS. Atuei em empresas como Fobbi, IN8 e
+            Medical Pay, e também como freelancer em projetos desafiadores e
+            diversos, sempre focado na componentização, clean code, consumo de
+            APIs REST e entrega ágil.
+          </p>
+
+          <p style={{ marginTop: 20 }}>
+            Meu stack atual me permite atuar de ponta a ponta no desenvolvimento
+            de sistemas modernos. Domino JavaScript, TypeScript, React, React
+            Native, Node.js, SQL, HTML, CSS e ferramentas complementares como
+            Git, Figma e metodologias ágeis. Estou sempre em busca de novos
+            aprendizados e desafios que me permitam evoluir tecnicamente e
+            contribuir com produtos de alto impacto.
           </p>
         </div>
+
         <div className="skillsText">
           <h2>Linguagens e Frameworks</h2>
           <Span text="JavaScript" />

@@ -1,10 +1,11 @@
-import React from "react";
-import { useLocation, useNavigate } from "react-router-dom";
-import { Button } from "../../components";
-import { ImgGarra, ImgJornal, ImgPokedex } from "../../assets";
-import { FaGithub } from "react-icons/fa";
-
 import "./style.scss";
+
+import { useLocation, useNavigate } from "react-router-dom";
+import { ImgGarra, ImgJornal, ImgPokedex, ImgToDo } from "../../assets";
+
+import React from "react";
+import { FaGithub } from "react-icons/fa";
+import { Button } from "../../components";
 
 const DetailsScreen: React.FC = () => {
   const { state } = useLocation();
@@ -25,6 +26,9 @@ const DetailsScreen: React.FC = () => {
         break;
       case 3:
         window.open("https://github.com/AthosEmanuel/newspaper");
+        break;
+      case 4:
+        window.open("https://github.com/AthosEmanuel/to-do-project");
         break;
       default:
         break;
@@ -125,6 +129,38 @@ const DetailsScreen: React.FC = () => {
             atende aos requisitos de teste, mas também estabelece uma base
             sólida para futuras expansões e melhorias na aplicação.
           </p>
+          <FaGithub size={30} onClick={sendToGithub} className="iconsStyle" />
+        </>
+      ) : id === 4 ? (
+        <>
+          <h1>TO DO </h1>
+          <img src={ImgToDo} height={340} alt="tela projeto todo" />
+          <p>
+            O projeto Task Manager é uma aplicação fullstack desenvolvida com
+            React no frontend e NestJS no backend, integrando tecnologias
+            modernas para gerenciamento de tarefas. A arquitetura do sistema é
+            organizada em duas camadas separadas —front e back — facilitando a
+            manutenção e a escalabilidade da aplicação.
+          </p>
+          <p>
+            No backend, o NestJS é utilizado em conjunto com Sequelize para
+            interagir com o banco de dados de forma estruturada. A API expõe
+            endpoints RESTful para operações de criação, leitura, atualização e
+            exclusão de tarefas (CRUD), com validações feitas por DTOs e
+            documentação completa gerada via Swagger. Cada tarefa possui campos
+            como nome do usuário, título e descrição.
+          </p>
+          <p>
+            O frontend em React consome essa API utilizando bibliotecas modernas
+            de requisição HTTP, organizando os dados em componentes
+            reutilizáveis. A aplicação permite ao usuário visualizar, cadastrar,
+            editar e deletar tarefas, com uma interface responsiva e intuitiva.
+            A separação entre os ambientes front e back proporciona maior
+            clareza no desenvolvimento, além de permitir futuras integrações e
+            expansões, como autenticação de usuários ou dashboard de
+            produtividade.
+          </p>
+
           <FaGithub size={30} onClick={sendToGithub} className="iconsStyle" />
         </>
       ) : (
