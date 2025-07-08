@@ -101,6 +101,18 @@ const DetailsScreen: React.FC = () => {
             harmonia entre modularização e integração de bibliotecas para criar
             uma aplicação React robusta e funcional.
           </p>
+          <label>
+            Projeto rodando:
+            <a
+              href="https://pokedexathos.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ marginLeft: 10, marginBottom: 20 }}
+            >
+              https://pokedexathos.netlify.app/
+            </a>
+          </label>
+
           <FaGithub size={30} onClick={sendToGithub} className="iconsStyle" />
         </>
       ) : id === 3 ? (
