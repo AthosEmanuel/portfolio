@@ -1,7 +1,13 @@
 import "./style.scss";
 
 import { useLocation, useNavigate } from "react-router-dom";
-import { ImgGarra, ImgJornal, ImgPokedex, ImgToDo } from "../../assets";
+import {
+  ImgGarra,
+  ImgJornal,
+  ImgPokedex,
+  ImgToDo,
+  ImgTrivia,
+} from "../../assets";
 
 import React from "react";
 import { FaGithub } from "react-icons/fa";
@@ -29,6 +35,9 @@ const DetailsScreen: React.FC = () => {
         break;
       case 4:
         window.open("https://github.com/AthosEmanuel/to-do-project");
+        break;
+      case 5:
+        window.open("https://github.com/AthosEmanuel/quiz");
         break;
       default:
         break;
@@ -173,6 +182,47 @@ const DetailsScreen: React.FC = () => {
             produtividade.
           </p>
 
+          <FaGithub size={30} onClick={sendToGithub} className="iconsStyle" />
+        </>
+      ) : id === 5 ? (
+        <>
+          <h1>Trivia</h1>
+          <img src={ImgTrivia} height={340} alt="tela projeto trivia" />
+          <p>
+            O projeto Trivia é uma aplicação web desenvolvida com React e
+            TypeScript, voltada para quizzes de conhecimentos gerais em inglês.
+            Utilizando a API pública Open Trivia DB (OpenTDB), a aplicação
+            fornece perguntas de múltipla escolha com categorias e níveis de
+            dificuldade selecionáveis pelo usuário.
+          </p>
+          <p>
+            A arquitetura é organizada em componentes reutilizáveis, com foco em
+            clareza de código, separação de responsabilidades e experiência do
+            usuário. O sistema permite que o usuário insira seu nome, escolha o
+            tema (como ciência, esportes ou história) e a dificuldade (fácil,
+            médio, difícil ou aleatória), respondendo a uma sequência de 10
+            perguntas com feedback no final.
+          </p>
+          <p>
+            A integração com a API é feita por meio de requisições HTTP
+            assíncronas, garantindo fluidez na navegação entre as etapas. A
+            interface foi projetada para ser responsiva e acessível, oferecendo
+            uma experiência simples e direta tanto em desktop quanto em
+            dispositivos móveis. O projeto também serve como base para evoluções
+            futuras, como placar de rankings, salvamento de pontuação ou
+            multiplayer.
+          </p>
+          <label>
+            Projeto rodando:
+            <a
+              href="https://ttrivia.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ marginLeft: 10, marginBottom: 20 }}
+            >
+              https://ttrivia.netlify.app/
+            </a>
+          </label>
           <FaGithub size={30} onClick={sendToGithub} className="iconsStyle" />
         </>
       ) : (

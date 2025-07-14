@@ -1,6 +1,12 @@
 import "./style.scss";
 
-import { ImgGarra, ImgJornal, ImgPokedex, ImgToDo } from "../../assets";
+import {
+  ImgGarra,
+  ImgJornal,
+  ImgPokedex,
+  ImgToDo,
+  ImgTrivia,
+} from "../../assets";
 
 import React from "react";
 import { useNavigate } from "react-router-dom";
@@ -21,6 +27,20 @@ const ProjectScreen: React.FC = () => {
     <body>
       <h1>Projetos</h1>
       <div className="contentWrapperProjects">
+        <div className="imagemHover">
+          <h2>Trivia</h2>
+          <img src={ImgTrivia} height={340} alt="tela da aplicação Trivia" />
+          <p>
+            Aplicação web desenvolvida para responder quizzes de conhecimentos
+            gerais em inglês. Permite escolher nome, tema e nível de
+            dificuldade, apresentando perguntas de múltipla escolha em
+            sequência, com resultado final ao término do jogo. Desenvolvida com
+            React e TypeScript, com foco em componentização, integração com API
+            pública (OpenTDB) e boas práticas de usabilidade
+          </p>
+          <Button text="Detalhes" handleEvent={() => sendToDetails(5)} />
+        </div>
+
         <div className="imagemHover">
           <h2>TO DO (Lista de Tarefas)</h2>
           <img src={ImgToDo} height={340} alt="tela da aplicação To Do" />
