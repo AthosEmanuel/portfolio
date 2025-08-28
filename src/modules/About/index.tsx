@@ -1,7 +1,6 @@
 import "./style.scss";
 
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { Button, Span } from "../../components";
+import { Button } from "../../components";
 
 import React from "react";
 import { useNavigate } from "react-router-dom";
@@ -13,77 +12,44 @@ const AboutScreen: React.FC = () => {
     navigate("/");
   };
 
-  const sendToGithub = () => {
-    window.open("https://github.com/AthosEmanuel/");
-  };
-  const sendToLinkedin = () => {
-    window.open("https://www.linkedin.com/in/athos-emanuel-5a1895150/");
-  };
-
   return (
     <body>
       <h1>Sobre</h1>
-      <div className="contentWrapper">
-        <div
-          className="aboutText"
-          style={{ maxWidth: "800px", margin: "0 auto", lineHeight: 1.6 }}
-        >
-          <p>
-            Olá, sou desenvolvedor desde 2019, com uma trajetória marcada pela
-            evolução constante e pela paixão por criar soluções inteligentes.
-            Iniciei minha carreira com Java e Bootstrap, e rapidamente expandi
-            meus conhecimentos para frameworks modernos como Angular e
-            TypeScript. Ao longo dos anos, encontrei no React — tanto web quanto
-            mobile — a ferramenta ideal para transformar ideias em interfaces
-            dinâmicas, escaláveis e de alta performance.
-          </p>
+      <div
+        className="aboutText"
+        style={{ maxWidth: "800px", margin: "0 auto", lineHeight: 1.6 }}
+      >
+        <p>
+          Desenvolvedor Frontend desde 2019, especializado em React, React
+          Native, TypeScript e Next.js. Tenho sólida experiência na construção
+          de aplicações web e mobile modernas, com foco em performance,
+          escalabilidade e excelente experiência do usuário.
+        </p>
 
-          <p style={{ marginTop: 20 }}>
-            Além do React, aprofundei minhas habilidades em Node.js, meu
-            framework de backend preferido, e tive experiências enriquecedoras
-            com Flutter Web e NestJS. Atuei em empresas como Fobbi, IN8 e
-            Medical Pay, e também como freelancer em projetos desafiadores e
-            diversos, sempre focado na componentização, clean code, consumo de
-            APIs REST e entrega ágil.
-          </p>
+        <p style={{ marginTop: 20 }}>
+          Minha jornada passou por empresas como Rethink, Fobbi e Medical Pay.
+          Nessas experiências, atuei de ponta a ponta no desenvolvimento,
+          aplicando práticas de componentização, clean code, testes
+          automatizados, CI/CD e metodologias ágeis para garantir entregas
+          rápidas e consistentes.
+        </p>
 
-          <p style={{ marginTop: 20 }}>
-            Meu stack atual me permite atuar de ponta a ponta no desenvolvimento
-            de sistemas modernos. Domino JavaScript, TypeScript, React, React
-            Native, Node.js, SQL, HTML, CSS e ferramentas complementares como
-            Git, Figma e metodologias ágeis. Estou sempre em busca de novos
-            aprendizados e desafios que me permitam evoluir tecnicamente e
-            contribuir com produtos de alto impacto.
-          </p>
-        </div>
+        <p style={{ marginTop: 20 }}>
+          Também possuo conhecimento em backend com Node.js e NestJS, o que me
+          permite compreender o ciclo completo de uma aplicação. Domino
+          Git/GitHub, SSR e CSR com Next.js, além de boas práticas de UI/UX para
+          transformar ideias em interfaces intuitivas. Tenho inglês técnico
+          sólido e grande interesse em Inteligência Artificial, área que venho
+          estudando para aplicar em soluções digitais inovadoras.
+        </p>
 
-        <div className="skillsText">
-          <h2>Linguagens e Frameworks</h2>
-          <Span text="JavaScript" />
-          <Span text="TypeScript" />
-          <Span text="HTML/CSS" />
-          <Span text="React" />
-          <Span text="NodeJS" />
-          <Span text="Github/Git" />
-          <Span text="Boostrap CSS" />
-          <Span text="Java" />
-          <Span text="JQuery" />
-          <Span text="SQL" />
-          <Span text="Angular" />
-          <h2>GitHub</h2>
-          <FaGithub size={30} onClick={sendToGithub} className="iconsStyle" />
-          <h2>Linkedin</h2>
-
-          <FaLinkedin
-            size={30}
-            onClick={sendToLinkedin}
-            className="iconsStyle"
-          />
-
-          <h2>Email</h2>
-          <h3 className="iconsStyle">athosevm@gmail.com</h3>
-        </div>
+        <p style={{ marginTop: 20 }}>
+          Estou sempre em busca de novos desafios que me permitam evoluir
+          profissionalmente e contribuir com produtos de alto impacto, unindo
+          tecnologia, inovação e visão de negócio.
+        </p>
       </div>
+
       <Button text="Voltar" handleEvent={sendToHome} />
     </body>
   );
